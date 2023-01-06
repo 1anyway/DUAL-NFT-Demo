@@ -15,7 +15,7 @@ contract DUALNFT is ERC721, ERC721URIStorage, Ownable, Pausable{
 
     Counters.Counter private _tokenIdCounter;
 
-    bool public isSale = false;
+    
     bool public isAllowListActive = false;
     uint256 public constant MAX_SUPPLY = 10000;
     uint256 public mintPrice = 0.01 ether;
@@ -121,7 +121,7 @@ contract DUALNFT is ERC721, ERC721URIStorage, Ownable, Pausable{
 
     // helper function to compare strings
     function compareStrings(string memory a, string memory b)
-        public
+        internal
         pure
         returns (bool)
     {
@@ -130,10 +130,7 @@ contract DUALNFT is ERC721, ERC721URIStorage, Ownable, Pausable{
     }
 
     // The following functions is an override required by Solidity.
-    function _burn(uint256 tokenId)
-        internal
-        override(ERC721, ERC721URIStorage)
-    {
+    function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
         super._burn(tokenId);
     }
 
