@@ -1,0 +1,20 @@
+{
+  "name": "dualnft",
+  "version": "1.0.0",
+  "description": "this is DUAL NFT demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "erc721a": "^4.2.3",
+    "hardhat": "^2.12.5",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "ethers": "^5.7.2",
+    "yarn": "^1.22.19"
+  }
+}
